@@ -7,32 +7,44 @@
 </head>
 <body>
 
-<div class="container mt-3">
-  <h2>Example of Jumbotron</h2>
+<div class="container mt-4">
+  <h2>Days left of the semester</h2>
   <div class="mt-4 p-5 bg-primary text-white rounded ">
     <h1 id="demo" class="text-center">0</h1> 
     <div  class="d-flex justify-content-center gap-3">
-    <button onclick="incroment()" type="button" class="btn btn-info">Incroment +</button>
-    <button onclick="decroment()" type="button" class="btn btn-warning">Decromant -</button>
-    <button onclick="reset()"type="button" class="btn btn-danger">Reset</button>  
+    
+
+    <button onclick="countUp()" type="button diamond" class="btn btn-info">ADD A DAY +</button>
+    <button onclick="countDown()" type="button diamond" class="btn btn-warning">DELETE A DAY -</button>
+    <button onclick="reset()"type="button diamond" class="btn btn-danger">RESET</button>  
     </div>
 </div>
 </div>
 
-<script>
-    function incroment() {
-        document.getElementById("demo").innerHTML = "Hello World";
-      }
 
-      function decroment() {
-        document.getElementById("demo").innerHTML = "Hello World";
-      }
+  <script>
+    let count = 0 + 1;
 
-      function reset() {
-        document.getElementById("demo").innerHTML = "0";
-      }
+    function countUp() {
+        count++;
+        document.getElementById("demo").innerHTML = count;
+    }
+    
+    
+    function countDown() {
+      count--;
+      document.getElementById("demo").innerHTML = count;
+    }
 
-</script>
+
+    function reset() {
+      count = 0;
+      document.getElementById("demo").innerHTML = count;
+    }
+  </script>
+
+
+
 
 </body>
 </html>
